@@ -22,3 +22,20 @@ Student.prototype.aprobarCurso = function (nuevoCurso) {
 }
 
 const Juanita = new Student("Juanita", 25, [])
+
+// Prototipos con la sintaxis de clases
+
+class Student2 {
+  constructor(name, age, cursosAprobados) {
+    this.name = name;
+    this.age = age;
+    this.cursosAprobados = cursosAprobados;
+  }
+
+  aprobarCurso(nuevoCurso) {
+    this.cursosAprobados.push(nuevoCurso);
+    return nuevoCurso;
+  }
+}
+
+const Pablo = new Student2("Pablo Ramirez", 18, []);
