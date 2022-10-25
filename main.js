@@ -1,42 +1,24 @@
-class Student {
-  constructor({
-    name,
-    email,
-    username,
-    twitter = undefined,
-    instagram = undefined,
-    facebook = undefined,
-    approvedCourses = [],
-    learningPaths = []
-  }) {
-    this.name = name;
-    this.email = email;
-    this.username = username;
-    this.socialMedia = {
-      twitter,
-      instagram,
-      facebook
-    };
-    this.approvedCourses = approvedCourses;
-    this.learningPaths = learningPaths;
-  }
-}
+import { Student } from './classes/Student';
+import { LearningPath } from './classes/LearningPath';
+import { Course } from './classes/Course';
 
-class LearningPaths {
-  constructor({
-    name,
-    courses
-  }) {
-    this.name = name;
-    this.courses = courses;
-  }
-}
+const cursoBasicoJS = new Course({
+  name: "Curso Básico de JavaScript",
+})
 
-const JavaScript = new LearningPaths({
+const cursoCompBasica = new Course({
+  name: "Curso de Computación Básica",
+})
+
+const cursoPracticoJS = new Course({
+  name: "Curso Práctico de JavaScript",
+})
+
+const JavaScript = new LearningPath({
   name: "JavaScript a Profundidad",
   courses: [
-    "Curso Básico de JavaScript",
-    "Curso Práctico de JavaScript",
+    cursoBasicoJS,
+    cursoPracticoJS,
     "Taller Práctico de JavaScript: Matemáticas y Estadística Básica",
     "Taller Práctico de JavaScript: ¡Crea tu Primer Videojuego!",
     "Curso de Closures y Scope en JavaScript",
@@ -44,10 +26,10 @@ const JavaScript = new LearningPaths({
   ]
 })
 
-const GameDeveloper = new LearningPaths({
+const GameDeveloper = new LearningPath({
   name: "Game Developer",
   courses: [
-    "Curso de Computación Básica",
+    cursoCompBasica,
     "Nuevo Curso Gratis de Programación Básica",
     "Curso Profesional de Git y GitHub",
     "Curso de Introducción a C#",
