@@ -1,6 +1,6 @@
-import { Student } from './classes/Student';
-import { LearningPath } from './classes/LearningPath';
-import { Course } from './classes/Course';
+import { Student } from './classes/Student.js';
+import { LearningPath } from './classes/LearningPath.js';
+import { Course } from './classes/Course.js';
 
 const cursoBasicoJS = new Course({
   name: "Curso Básico de JavaScript",
